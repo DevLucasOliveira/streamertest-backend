@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Streamer.Project.Shared\Streamer.Project.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
