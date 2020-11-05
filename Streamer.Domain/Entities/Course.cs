@@ -8,9 +8,16 @@ namespace Streamer.Domain.Entities
         public Course(string name)
         {
             Name = name;
+            Projects = new List<Project>();
         }
 
         public string Name { get; private set; }
         public ICollection<Project> Projects { get; private set; }
+
+        public void UpdateName(string name)
+        {
+            Name = name;
+        }
+
     }
 }

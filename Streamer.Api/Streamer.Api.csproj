@@ -22,9 +22,5 @@
     <ProjectReference Include="..\Streamer.Infra\Streamer.Infra.csproj" />
     <ProjectReference Include="..\Streamer.Shared\Streamer.Shared.csproj" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
 
 </Project>
