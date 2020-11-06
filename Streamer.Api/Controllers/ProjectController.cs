@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Streamer.Domain.Commands;
+using Streamer.Domain.DTOs;
 using Streamer.Domain.Repositories;
 using System;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace Streamer.Api.Controllers
             [FromRoute] string id,
             [FromServices] IProjectRepository repository)
         {
-            return Ok(repository.GetById(new Guid(id)));
+            return Ok((Project)repository.GetById(new Guid(id)));
         }
 
         [HttpPut("{id}")]

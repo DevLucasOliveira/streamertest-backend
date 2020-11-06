@@ -19,5 +19,13 @@ namespace Streamer.Domain.Entities
             Name = name;
         }
 
+        public ICollection<Project> AddProject(Project project)
+        {
+            if (project.Valid)
+                Projects.Add(project);
+
+            return Projects;
+        }
+
     }
 }
