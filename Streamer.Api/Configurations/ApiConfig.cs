@@ -21,8 +21,7 @@ namespace Streamer.Api.Configurations
             services.AddMediatR(typeof(CourseHandler).GetTypeInfo().Assembly);
             services.AddMediatR(typeof(ProjectHandler).GetTypeInfo().Assembly);
 
-            //services.AddDbContext<DataContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("StreamerConnection")));
-            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("StreamerConnection"));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("StreamerConnection")));
 
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<CourseHandler>();

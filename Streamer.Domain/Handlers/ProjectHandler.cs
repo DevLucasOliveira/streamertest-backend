@@ -31,7 +31,7 @@ namespace Streamer.Domain.Handlers
             if (course == null)
                 return new GenericCommandResult(false, "Curso não cadastrado", command.CourseId);
 
-            var project = new Entities.Project(command.Name, command.Image, command.Why, command.What, command.WhatWillWeDo, command.ProjectStatus);
+            var project = new Entities.Project(command.Name, null, command.Why, command.What, command.WhatWillWeDo, command.ProjectStatus);
 
             course.AddProject(project);
 
@@ -51,7 +51,7 @@ namespace Streamer.Domain.Handlers
             if (project == null)
                 return new GenericCommandResult(false, "Projeto não cadastrado", command.CourseId);
 
-            project.Update(command.Name, command.Image, command.Why, command.What, command.WhatWillWeDo, command.ProjectStatus);
+            project.Update(command.Name, null, command.Why, command.What, command.WhatWillWeDo, command.ProjectStatus);
 
             _projectRepository.Update(project);
 
